@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 // Read keys from compile-time flags (--dart-define-from-file=env.json)
@@ -21,7 +22,7 @@ Future<void> main() async {
     }
   }
 
-  runApp(const MyApp());
+  runApp(const HomeWidget());
 
   // Wrap runApp with DevicePreview
   // runApp(DevicePreview());
@@ -30,8 +31,9 @@ Future<void> main() async {
 // Convenient getter for the Supabase client
 SupabaseClient get supabase => Supabase.instance.client;
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+
+class HomeWidget extends StatelessWidget {
+  const HomeWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
